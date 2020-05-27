@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="StaffTool" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2e874292-ce29-4512-a565-1650de387a88" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aeTQzWDG5C6VTQjpDEN4UWbKPJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="D:/AndroidSDK" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RollCommand" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15481171" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.bereshitweb.morningstarplugins.inventorysee" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Plugin Arcturus\InventorySee\src\main\resources" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e874292-ce29-4512-a565-1650de387a88" name="Default Changelist" comment="" />
+      <created>1566307750927</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566307750927</updated>
+      <workItem from="1566307756032" duration="4393000" />
+      <workItem from="1566328280518" duration="1827000" />
+      <workItem from="1566347035030" duration="1588000" />
+      <workItem from="1566418191547" duration="1566000" />
+      <workItem from="1566480676582" duration="1488000" />
+      <workItem from="1566497723315" duration="597000" />
+      <workItem from="1566652385554" duration="362000" />
+      <workItem from="1567403875801" duration="725000" />
+      <workItem from="1567465979047" duration="666000" />
+      <workItem from="1567820599111" duration="1425000" />
+      <workItem from="1568023219232" duration="597000" />
+      <workItem from="1569944943382" duration="842000" />
+      <workItem from="1572370026841" duration="281000" />
+      <workItem from="1572694587981" duration="11000" />
+      <workItem from="1587095048962" duration="21113000" />
+      <workItem from="1587241121830" duration="1889000" />
+      <workItem from="1588269332226" duration="2729000" />
+      <workItem from="1588309006458" duration="2119000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1587145877630">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587145877630" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1587241808950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587241808950" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1587148619652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587148619652" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587150284198">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587150284198" />
+  </component>
+</project>
