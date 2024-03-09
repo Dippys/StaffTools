@@ -1,6 +1,7 @@
 package net.bereshitweb.stafftool.events;
 
 import com.eu.habbo.Emulator;
+import com.eu.habbo.habbohotel.permissions.Permission;
 import com.eu.habbo.habbohotel.rooms.Room;
 import com.eu.habbo.habbohotel.rooms.RoomTrade;
 import com.eu.habbo.habbohotel.rooms.RoomUnitStatus;
@@ -21,7 +22,7 @@ public class OverrideTradeStartEvent extends MessageHandler {
                 if (userId >= 0 && userId != this.client.getHabbo().getRoomUnit().getId()) {
                     Habbo targetUser = room.getHabboByRoomUnitId(userId);
 
-                    boolean tradeAnywhere = this.client.getHabbo().hasPermission("acc_trade_anywhere");
+                    boolean tradeAnywhere = this.client.getHabbo().hasPermission(Permission.ACC_TRADE_ANYWHERE);
 
                     if (!RoomTrade.TRADING_ENABLED && !tradeAnywhere) {
                         this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.HOTEL_TRADING_NOT_ALLOWED));
@@ -38,30 +39,31 @@ public class OverrideTradeStartEvent extends MessageHandler {
                         return;
                     }
 
-                    if (targetUser != null) {
-                        if(targetUser.getHabboStats().cache.containsKey(StaffToolUtils.CHECKINVKEY)) {
-                            this.client.getHabbo().whisper(Emulator.getTexts().getValue("checkinventory.error.cant_trade"));
-                            return;
-                        }
+                    if (targetUser == null) return;
 
-                        if (!this.client.getHabbo().getRoomUnit().hasStatus(RoomUnitStatus.TRADING)) {
-                            if (this.client.getHabbo().getHabboStats().allowTrade()) {
-                                if (!targetUser.getRoomUnit().hasStatus(RoomUnitStatus.TRADING)) {
-                                    if (targetUser.getHabboStats().allowTrade()) {
-                                        room.startTrade(this.client.getHabbo(), targetUser);
-                                    } else {
-                                        this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.TARGET_TRADING_NOT_ALLOWED, targetUser.getHabboInfo().getUsername()));
-                                    }
-                                } else {
-                                    this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.TARGET_ALREADY_TRADING, targetUser.getHabboInfo().getUsername()));
-                                }
-                            } else {
-                                this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.YOU_TRADING_OFF));
-                            }
-                        } else {
-                            this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.YOU_ALREADY_TRADING));
-                        }
+                    if (targetUser.getHabboStats().userIgnored(this.client.getHabbo().getHabboInfo().getId())) return;
+
+                    if (this.client.getHabbo().getRoomUnit().hasStatus(RoomUnitStatus.TRADING)) {
+                        this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.YOU_ALREADY_TRADING));
+                        return;
                     }
+
+                    if (!this.client.getHabbo().getHabboStats().allowTrade()) {
+                        this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.YOU_TRADING_OFF));
+                        return;
+                    }
+
+                    if (targetUser.getRoomUnit().hasStatus(RoomUnitStatus.TRADING)) {
+                        this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.TARGET_ALREADY_TRADING, targetUser.getHabboInfo().getUsername()));
+                        return;
+                    }
+
+                    if (!targetUser.getHabboStats().allowTrade()) {
+                        this.client.sendResponse(new TradeStartFailComposer(TradeStartFailComposer.TARGET_TRADING_NOT_ALLOWED, targetUser.getHabboInfo().getUsername()));
+                        return;
+                    }
+
+                    room.startTrade(this.client.getHabbo(), targetUser);
                 }
             }
         }
